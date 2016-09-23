@@ -5,7 +5,8 @@
   "main": "lib/index.js",
   "scripts": {
     "lint": "standard",
-    "test": "istanbul cover _mocha test/ -- --recursive"
+    "test": "cd test/env && bash run.sh",
+    "test:run": "istanbul cover _mocha test/ -- --recursive"
   },
   "author": "",
   "license": "ISC",
@@ -18,6 +19,7 @@
     "chai": "^3.5.0",
     "istanbul": "^0.4.5",
     "mocha": "^3.0.2",
+    "sinon": "^1.17.6",
     "standard": "^8.0.0"
   },
   "standard": {

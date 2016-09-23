@@ -1,0 +1,14 @@
+version: "2"
+services:
+  microscopic-rabbitmq-transport:
+    build:
+      context: ../../
+      dockerfile: test/env/Dockerfile
+    links:
+      - rabbitmq-server
+  rabbitmq-server:
+    image: rabbitmq
+    hostname: rabbitmq-server-1
+    expose:
+      - "5672"
+
